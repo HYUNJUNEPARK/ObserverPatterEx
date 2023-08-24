@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.observerpattern.R
 import com.example.observerpattern.databinding.FragmentBottomBinding
-import com.example.observerpattern.observer.EventListener
+import com.example.observerpattern.observer.BellEventListener
 import com.example.observerpattern.observer.LogoutObservable
 
 class BottomFragment : Fragment() {
@@ -33,7 +33,7 @@ class BottomFragment : Fragment() {
     }
 
     //Sample Code2
-    fun catchTopFragmentEventAndRingBell(eventListener: EventListener) {
-        eventListener.onRingBell("BottomFragment")
+    fun catchTopFragmentEventAndRingBell(bellEventListener: BellEventListener) {
+        bellEventListener.onRingBell("BottomFragment")
     }
 }

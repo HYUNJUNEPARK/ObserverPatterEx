@@ -20,15 +20,26 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()->topFragment.onButtonClickedListener()}"
+            android:onClick="@{()->topFragment.onButtonClickedListener1()}"
             android:text="Top Button 1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()->topFragment.startEvent()}"
+            android:onClick="@{()->topFragment.onButtonClickedListener2()}"
             android:text="Top Button 2" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->topFragment.onButtonClickedListener3()}"
+            android:text="Top Button 3" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->topFragment.onButtonClickedListener4()}"
+            android:text="Top Button 4" />
 
     </LinearLayout>
 </layout>
