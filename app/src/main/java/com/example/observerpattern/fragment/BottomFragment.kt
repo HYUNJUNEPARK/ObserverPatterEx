@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.observerpattern.R
 import com.example.observerpattern.databinding.FragmentBottomBinding
+import com.example.observerpattern.observer.EventListener
 import com.example.observerpattern.observer.LogoutObservable
 
 class BottomFragment : Fragment() {
@@ -24,10 +25,15 @@ class BottomFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Sample Code1
         LogoutObservable.addObserver { _, obj ->
-            val dataFromTopBottom = obj as String
-            Toast.makeText(requireContext(), "$dataFromTopBottom", Toast.LENGTH_SHORT).show()
+            val dataFromTopFragment = obj as String
+            Toast.makeText(requireContext(), "$dataFromTopFragment", Toast.LENGTH_SHORT).show()
         }
+    }
 
+    //Sample Code2
+    fun catchTopFragmentEventAndRingBell(eventListener: EventListener) {
+        eventListener.onRingBell("BottomFragment")
     }
 }
